@@ -1,4 +1,4 @@
-import { createSelector, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const slice = createSlice({
   name: 'auth',
@@ -12,3 +12,5 @@ const slice = createSlice({
     isRefreshing: false,
   },
 });
+ 
+export default slice.reducer;
