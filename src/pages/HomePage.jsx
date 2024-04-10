@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to PhoneBook page!</h1>
+      <h1>{`Welcome to PhoneBook's Home page!`}</h1>
       <p>
         {`Welcome to the web application, where You can easily and conveniently
         manage your contact list. Here you'll be able to add new contacts, view

@@ -4,8 +4,8 @@ import ContactList from '../ContactList/ContactList';
 import css from '../App/App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contacts/operations';
-import { selectError, selectLoading } from '../../redux/contacts/selectors';
+import { fetchContacts } from '../redux/contacts/operations';
+import { selectError, selectLoading } from '../redux/contacts/selectors';
 import { Loader, ErrorComponent } from '../StatusIndicators/StatusIndicators';
 
 export default function Conctacts() {

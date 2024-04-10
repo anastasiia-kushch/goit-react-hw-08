@@ -7,6 +7,7 @@ import {
 } from './operations';
 import { selectNameFilter } from '../filters/selectors';
 import { selectContacts } from './selectors';
+import { logOut } from '../auth/operations';
 
 const slice = createSlice({
   name: 'contacts',
@@ -71,7 +72,12 @@ const slice = createSlice({
       .addCase(editContact.rejected, (state) => {
         state.loading = false;
         state.error = true;
-      }),
+      })
+      .addCase(logOut.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      })
 });
 
 export default slice.reducer;
