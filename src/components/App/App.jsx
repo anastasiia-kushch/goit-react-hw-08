@@ -11,7 +11,7 @@ function App() {
   return (
     <Layout>
       <hr />
-      <Suspense fallback={<div>LOADING...</div>}>
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage/>} />
           <Route path="/register" element={<RegistrationPage/>} />

@@ -12,7 +12,7 @@ export default function RegistrationPage() {
       {error && <ErrorComponent />}
       {!loading && !error && (
         <div>
-          <h1>Registration</h1>
+          <h1>Register your accpunt</h1>
           <RegisterForm />
         </div>
       )}

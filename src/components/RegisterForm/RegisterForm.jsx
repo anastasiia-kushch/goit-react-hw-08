@@ -27,12 +27,16 @@ export default function RegisterForm() {
   const passwordFieldId = useId();
   const dispatch = useDispatch();
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = (values, actions) => {
     dispatch(register(values));
+    actions.resetForm();
   };
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={handleSubmit}
+      validationSchema={validationSchema}
+    >
       <Form className={css.container} autoComplete="off">
         <label htmlFor={nameFieldId}>Username</label>
         <Field name="name" id={nameFieldId}></Field>
