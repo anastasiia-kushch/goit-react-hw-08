@@ -7,7 +7,7 @@ export default function UserMenu() {
   const user = useSelector(selectUser);
 
   const handleClick = () => {
-    dispatch(logOut);
+    dispatch(logOut());
   };
   return (
     <div>

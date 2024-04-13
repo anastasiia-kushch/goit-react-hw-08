@@ -15,14 +15,16 @@ import contactsReducer from './contacts/slice';
 import filtersReducer from './filters/slice';
 
 const authPersistConfig = {
-  key: 'auth',
+  key: 'authSlice',
   storage,
   whitelist: ['token'],
 };
 
+const persistedAuthReducer = persistReducer(authPersistConfig, authReducer)
+
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(authPersistConfig, authReducer),
+    auth: persistedAuthReducer,
     contacts: contactsReducer,
     filters: filtersReducer,
   },
@@ -32,7 +34,6 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);
