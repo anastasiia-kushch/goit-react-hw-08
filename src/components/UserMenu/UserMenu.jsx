@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selectors';
+import css from './UserMenu.module.css';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -10,9 +11,9 @@ export default function UserMenu() {
     dispatch(logOut());
   };
   return (
-    <div>
+    <div className={css.container}>
       <p>Welcome, {user.name}</p>
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={handleClick} className={css.button}>
         Logout
       </button>
     </div>

@@ -8,6 +8,7 @@ import { Loader } from '../StatusIndicators/StatusIndicators';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import RestrictedRoute from '../RestrictedRoute';
 import PrivateRoute from '../PrivateRoute';
+import css from './App.module.css';
 
 const HomePage = lazy(() => import('../../pages/HomePage'));
 const ContactsPage = lazy(() => import('../../pages/ContactsPage'));
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <Layout>
-      <hr />
+      <div className={css.hr}></div>
       {iRefreshing ? (
         <Loader />
       ) : (

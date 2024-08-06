@@ -1,11 +1,20 @@
-.div {
-  width: 430px;
+.container {
   border: 1.5px solid #705257;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 12px;
   background-color: #ffffff;
+  box-shadow: 0px 4px 10px 10px rgba(190, 190, 188, 0.346);
+  margin-top: 25px;
 }
 
-.div h1 {
-  color: #705257;
+.container h1 {
+  color: #3b2b2d;
+}
+
+.hr {
+  border: 0;
+  border-radius: 2px;
+  height: 1px;
+  background: #b0b0b0;
+  margin: 11px 0;
 }

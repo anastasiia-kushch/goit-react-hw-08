@@ -37,14 +37,21 @@ export default function RegisterForm() {
       onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
-      <Form className={css.container} autoComplete="off">
+      <Form className={css.form} autoComplete="off">
         <label htmlFor={nameFieldId}>Username</label>
-        <Field name="name" id={nameFieldId}></Field>
+        <Field name="name" id={nameFieldId} className={css.input}></Field>
         <label htmlFor={emailFieldId}>Email</label>
-        <Field name="email" id={emailFieldId}></Field>
+        <Field name="email" id={emailFieldId} className={css.input}></Field>
         <label htmlFor={passwordFieldId}>Password</label>
-        <Field name="password" id={passwordFieldId} type="password"></Field>
-        <button type="submit">Register</button>
+        <Field
+          name="password"
+          id={passwordFieldId}
+          type="password"
+          className={css.input}
+        ></Field>
+        <button type="submit" className={css.button}>
+          Register
+        </button>
       </Form>
     </Formik>
   );

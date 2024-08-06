@@ -6,7 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectError, selectLoading } from '../redux/contacts/selectors';
-import { Loader, ErrorComponent } from '../components/StatusIndicators/StatusIndicators';
+import {
+  Loader,
+  ErrorComponent,
+} from '../components/StatusIndicators/StatusIndicators';
 
 export default function Conctacts() {
   const dispatch = useDispatch();
@@ -22,7 +25,7 @@ export default function Conctacts() {
       {loading && <Loader />}
       {error && <ErrorComponent />}
       {!loading && !error && (
-        <div className={css.div}>
+        <div className={css.container}>
           <h1>Phonebook</h1>
           <ContactForm />
           <SearchBox />

@@ -21,12 +21,19 @@ export default function LoginForm() {
 
   return (
     <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-      <Form className={css.container} autoComplete="off">
+      <Form className={css.form} autoComplete="off">
         <label htmlFor={emailFieldId}>Email</label>
-        <Field name="email" id={emailFieldId}></Field>
+        <Field name="email" id={emailFieldId} className={css.input}></Field>
         <label htmlFor={passwordFieldId}>Password</label>
-        <Field name="password" id={passwordFieldId} type="password"></Field>
-        <button type="submit">Login</button>
+        <Field
+          name="password"
+          id={passwordFieldId}
+          type="password"
+          className={css.input}
+        ></Field>
+        <button type="submit" className={css.button}>
+          Login
+        </button>
       </Form>
     </Formik>
   );

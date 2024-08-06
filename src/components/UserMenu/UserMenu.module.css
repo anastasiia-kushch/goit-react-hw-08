@@ -1,0 +1,23 @@
+.button {
+  background-color: #705257c0;
+  color: white;
+  border: 1px transparent solid;
+  border-radius: 4px;
+  align-self: center;
+  padding: 8px 12px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #705257;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.container p {
+  color: #3b2b2d;
+}
