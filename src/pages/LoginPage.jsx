@@ -11,11 +11,11 @@ export default function LoginPage() {
   const error = useSelector(selectError);
   const loading = useSelector(selectLoading);
   return (
-    <div className={css.container}>
+    <div>
       {loading && <Loader />}
       {error && <ErrorComponent />}
       {!loading && !error && (
-        <div>
+        <div className={css.container}>
           <h1>Log in</h1>
           <LoginForm />
         </div>

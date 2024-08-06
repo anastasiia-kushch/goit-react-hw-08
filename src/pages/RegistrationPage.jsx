@@ -11,11 +11,11 @@ export default function RegistrationPage() {
   const loading = useSelector(selectError);
   const error = useSelector(selectLoading);
   return (
-    <div className={css.container}>
+    <div>
       {loading && <Loader />}
       {error && <ErrorComponent />}
       {!loading && !error && (
-        <div>
+        <div className={css.container}>
           <h1>Register your account</h1>
           <RegisterForm />
         </div>
